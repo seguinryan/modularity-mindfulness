@@ -1,27 +1,52 @@
 html {
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
   font-family: "Noto Sans", sans-serif;
-  line-height: 1.5;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+nav a {
+  color: #005e76;
+  text-decoration: none;
+
+  border-bottom: 2px solid #8bc9d9;
 }
 
-[lang="ja"] {
-  font-family: "Noto Sans JP", sans-serif;
-  font-style: normal;
+nav a:hover {
+  color: #005e76;
+
+  border-bottom: 2px solid #005e76;
 }
 
-body {
-  margin: 0;
+a:focus,
+small:focus {
+  outline: 2px solid #000;
 }
 
-img {
-  display: block;
-  width: 100%;
+.jap {
+  font-family: "Noto Sans Japanese", sans-serif;
+}
+
+.btn-ghost {
+  color: #005e76;
+  border: 2px solid #0084a6;
+}
+
+.btn-ghost:hover {
+  background-color: #8bc9d9;
+  border-color: #005e76;
+  color: #005e76;
+}
+
+hr {
+  border-color: #e2e2e2;
+}
+
+@media only screen and (min-width: 60em) {
+
+  .heading {
+    text-align: left;
+  }
+
+  .nav {
+    text-align: right;
+  }
+
 }
