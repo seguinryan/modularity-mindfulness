@@ -19,7 +19,13 @@ html {
 
 body {
   margin: 0;
-  padding: 1rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem .5rem;
 }
 
 img {
@@ -27,90 +33,121 @@ img {
   width: 100%;
 }
 
-header {
-  margin: 0;
+h1 {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0 1rem;
+  font-size: 2rem;
 }
 
-h1 {
-  font-size: 2rem;
-  margin: 0;
-  padding: 0;
+h1 span {
+  font-size: 1.125rem;
 }
 
 nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 1.125rem;
 }
 
-ul li {
-  /* font-style: normal; */
-  margin: .5em 1em .6em;
-  font-style: normal;
+nav li {
+  padding: 0 .5rem;
 }
 
-a {
+nav a {
   color: #3783a3;
-}
-
-figcaption > a {
-  text-decoration: none;
-  font-style: normal;
-  border: .2rem #3783a3 solid;
-  padding: 1rem;
-  border-radius: .3rem;
+  text-decoration-color: rgba(55, 131, 163, .5);
 }
 
 main {
-  /* margin: 1.5rem; */
+  margin: 0 0 1.5rem;
+  padding: 0 1rem;
+}
+
+main img {
+  margin-bottom: 1.5rem;
 }
 
 .intro {
-  margin: 1.5rem auto 1.5rem;
-  padding: 2rem;
+  margin: 0 auto 1.5rem;
+  padding: 1rem;
+  max-width: 30em;
   text-align: center;
   border-top: .2rem solid #e2e2e2;
   border-bottom: .2rem solid #e2e2e2;
-  max-width: 30em;
-  font-style: normal;
 }
 
 .intro i {
   font-size: 2rem;
 }
 
-section {
-  /* display: flex;
-  flex-wrap: wrap; */
-  /* margin: 1.5rem; */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin: 0 0 1.5rem;
 }
 
-figure {
-  margin: 0;
-}
-
-
-span {
-  font-size: 1rem;
-  font-style: normal;
-}
-
-h1 {
+article {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-*Typefaces:* (Already included in your HTML)
-- *Text sizes:* `1rem`, `1.125rem`, `1.5rem`, `2rem`
-- *Colours:* `#e2e2e2`, `#3783a3`, `#000`
-- *Max lengths:* `30em`
-- *Gaps:* `1rem`
-- *Margins:* `1.5rem`
-- *Paddings:* `.5em 1em .6em`, `1rem`, `.5rem`
-- *Border thicknesses:* `.2rem`
-- *Corner radii:* `.3rem`
+h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+}
+
+h2 span {
+  font-size: 1rem;
+}
+
+article p {
+  margin: 0 0 1.5rem;
+}
+
+article a {
+  color: #3783a3;
+  text-decoration: none;
+  border: .2rem solid rgba(55, 131, 163, .5);
+  border-radius: .3rem;
+  margin: auto 0 0;
+  padding: .5em 1em .6em;
+}
+
+footer {
+  border-top: .2rem solid #e2e2e2;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 38em) {
+
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    align-items: flex-start;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+}
